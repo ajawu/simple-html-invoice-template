@@ -4,10 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>A simple, clean, and responsive HTML invoice template</title>
-
-		<!-- Favicon -->
-		<link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+		<title>Receipt for order</title>
 
 		<!-- Invoice styling -->
 		<style>
@@ -101,6 +98,23 @@
 				font-weight: bold;
 			}
 
+			.print-button {
+				background-color: #fff;
+				border: 1px solid #000;
+				border-radius: 5px;
+				font-weight: 600;
+				font-size: 16px;
+				padding: 10px 15px;
+				margin-bottom: 10px;
+				transition: all 0.3s;
+			}
+
+			.print-button:hover {
+				cursor: pointer;
+				background-color: #000;
+				color: #fff;
+			}
+
 			@media only screen and (max-width: 600px) {
 				.invoice-box table tr.top table td {
 					width: 100%;
@@ -118,12 +132,10 @@
 	</head>
 
 	<body>
-		<h1>A simple, clean, and responsive HTML invoice template</h1>
-		<h3>Because sometimes, all you need is something simple.</h3>
-		Find the code on <a href="https://github.com/sparksuite/simple-html-invoice-template">GitHub</a>. Licensed under the
-		<a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.<br /><br /><br />
-
-		<div class="invoice-box">
+		<button class="print-button print" onclick="window.print();return false;">
+			Print/Save
+		</button> <br>
+		<div class="invoice-box print">
 			<table>
 				<tr class="top">
 					<td colspan="2">
@@ -134,9 +146,8 @@
 								</td>
 
 								<td>
-									Invoice #: 123<br />
+									Order #: 123<br />
 									Created: January 1, 2015<br />
-									Due: February 1, 2015
 								</td>
 							</tr>
 						</table>
@@ -148,15 +159,14 @@
 						<table>
 							<tr>
 								<td>
-									Sparksuite, Inc.<br />
-									12345 Sunny Road<br />
-									Sunnyville, TX 12345
+									HadiFinance<br />
+									5SD8 Lakeview Homes Phase 2<br />
+									Kado Abuja FCT
 								</td>
 
 								<td>
-									Acme Corp.<br />
-									John Doe<br />
-									john@example.com
+									Daniel Olabisi<br />
+									08156227194
 								</td>
 							</tr>
 						</table>
@@ -166,13 +176,13 @@
 				<tr class="heading">
 					<td>Payment Method</td>
 
-					<td>Check #</td>
+					<td></td>
 				</tr>
 
 				<tr class="details">
-					<td>Check</td>
+					<td>Online</td>
 
-					<td>1000</td>
+					<td></td>
 				</tr>
 
 				<tr class="heading">
@@ -184,27 +194,31 @@
 				<tr class="item">
 					<td>Website design</td>
 
-					<td>$300.00</td>
+					<td>₦300.00</td>
 				</tr>
 
 				<tr class="item">
 					<td>Hosting (3 months)</td>
 
-					<td>$75.00</td>
+					<td>₦75.00</td>
 				</tr>
 
 				<tr class="item last">
 					<td>Domain name (1 year)</td>
 
-					<td>$10.00</td>
+					<td>₦10.00</td>
 				</tr>
 
 				<tr class="total">
 					<td></td>
 
-					<td>Total: $385.00</td>
+					<td>Total: ₦385.00</td>
 				</tr>
 			</table>
 		</div>
 	</body>
+	<script>
+		const printButton = document.getElementsByClassName("print-button")[0];
+		printButton.
+	</script>
 </html>
